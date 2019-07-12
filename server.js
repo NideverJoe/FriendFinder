@@ -1,0 +1,64 @@
+///////////////////////////
+//DEPENDENCIES//
+/////////////////////////
+
+var express = require("express");
+var app = express();
+var path = require("path");
+
+/////////////////////////
+//PORT//
+/////////////////////////
+var PORT = process.env.PORT || 3000;
+
+
+/////////////////////////
+//MIDDLEWARE//
+/////////////////////////
+//urlencoded
+//express.js
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+/////////////////////////
+//ROUTES//
+/////////////////////////
+app.get("/", function(req, res){
+    res.sendFile(path.join(__dirname, "app/public/home.html"));
+})
+app.get("/survey", function(req, res){
+    res.sendFile(path.join(__dirname, "app/public/survey.html"));
+})
+
+
+/////////////////////////
+//Choose/Define Manager Function//
+/////////////////////////
+
+
+
+/////////////////////////
+//DISPLAY DATABASE INVENTORY//
+/////////////////////////
+
+
+
+/////////////////////////
+//DISPLAY LOW INVENTORY//
+/////////////////////////
+
+
+
+/////////////////////////
+//ADD TO INVENTORY//
+/////////////////////////
+
+
+
+/////////////////////////
+//LISTENING//
+/////////////////////////
+
+app.listen(PORT, function(){
+    console.log("connected on: " + PORT);
+})
