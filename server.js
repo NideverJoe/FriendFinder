@@ -20,38 +20,13 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-/////////////////////////
-//ROUTES//
-/////////////////////////
-app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "app/public/home.html"));
-})
-app.get("/survey", function(req, res){
-    res.sendFile(path.join(__dirname, "app/public/survey.html"));
-})
-
-
-/////////////////////////
-//Choose/Define Manager Function//
-/////////////////////////
 
 
 
 /////////////////////////
-//DISPLAY DATABASE INVENTORY//
+//MORE CODE//
 /////////////////////////
 
-
-
-/////////////////////////
-//DISPLAY LOW INVENTORY//
-/////////////////////////
-
-
-
-/////////////////////////
-//ADD TO INVENTORY//
-/////////////////////////
 
 
 
