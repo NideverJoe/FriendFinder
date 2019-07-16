@@ -1,4 +1,8 @@
-[{
+/////////////////////////
+//FRIENDS FOR COMPARISON//
+/////////////////////////
+
+var friendsArray = [{
     name:"Ahmed",
     photo:"https://www.pinclipart.com/picdir/big/142-1421318_abdu-sentamu-person-image-placeholder-clipart.png",
     scores:[
@@ -63,3 +67,5 @@
       ]
   },
 ]
+
+module.exports = friendsArray;

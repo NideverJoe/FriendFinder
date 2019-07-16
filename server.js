@@ -3,12 +3,14 @@
 /////////////////////////
 
 var express = require("express");
-var app = express();
 var path = require("path");
+var bodyParser = require('body-parser');
+
 
 /////////////////////////
-//PORT//
+//EXPRESS CONFIG AND PORT//
 /////////////////////////
+var app = express();
 var PORT = process.env.PORT || 3000;
 
 
@@ -17,18 +19,17 @@ var PORT = process.env.PORT || 3000;
 /////////////////////////
 //urlencoded
 //express.js
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-
-
+//body-parser
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.text());
 
 /////////////////////////
-//MORE CODE//
+//ROUTING CODE//
 /////////////////////////
 
-
-
+require(path.join(__dirname, './app/routing/apiRoutes'))(app);
+require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
 
 /////////////////////////
 //LISTENING//
