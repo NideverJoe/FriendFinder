@@ -1,5 +1,6 @@
 var path = require("path");
-
+var matchName = '';
+var matchImage = '';
 
 var friendsArray=require('../data/friends');
 
@@ -19,8 +20,7 @@ app.post("/api/friends", function(req, res){
 		// console.log('userResponses = ' + userResponses);
 
 		// Compute best friend match
-		var matchName = '';
-		var matchImage = '';
+
 		var totalDifference = 9001; // Make the initial value big for comparison
 
 		// Examine all existing friends in the list

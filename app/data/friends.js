@@ -3,8 +3,8 @@
 /////////////////////////
 
 var friendsArray = [{
-    name:"Ahmed",
-    photo:"https://www.pinclipart.com/picdir/big/142-1421318_abdu-sentamu-person-image-placeholder-clipart.png",
+    name:"Simba",
+    photo:"https://mixnews.lv/wp-content/uploads/2019/07/the-lion-king-mufasa-simba-1554901700.jpg",
     scores:[
         5,
         1,
@@ -19,8 +19,8 @@ var friendsArray = [{
       ]
   },
   {
-    name:"Sue",
-    photo:"https://www.pinclipart.com/picdir/big/159-1590978_staff-woman-placeholder-clipart.png",
+    name:"Nala",
+    photo:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/char-banners-lions-names-nala-united-kingdom-1559301410.jpg",
     scores:[
         5,
         1,
@@ -35,8 +35,8 @@ var friendsArray = [{
       ]
   },
   {
-    name:"Bob",
-    photo:"https://www.pinclipart.com/picdir/big/142-1421318_abdu-sentamu-person-image-placeholder-clipart.png",
+    name:"Timon",
+    photo:"https://images.immediate.co.uk/production/volatile/sites/3/2019/06/the-lion-king-poster-timon-fdb4a0d.jpg",
     scores:[
         4,
         2,
@@ -51,8 +51,8 @@ var friendsArray = [{
       ]
   },
   {
-    name:"Callie",
-    photo:"https://www.pinclipart.com/picdir/big/159-1590978_staff-woman-placeholder-clipart.png",
+    name:"Pumba",
+    photo:"https://i.kinja-img.com/gawker-media/image/upload/s--pOzNgdyg--/c_scale,f_auto,fl_progressive,q_80,w_800/kefq9ybzikqdrfsytz0d.jpg",
     scores:[
         1,
         1,

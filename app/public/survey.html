@@ -12,7 +12,7 @@
   <!-- Font Awesome Glyphicons -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
-  <!-- Chosen --> 
+  <!-- Chosen -->
   <!-- This is so cool!!!! -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
@@ -154,13 +154,15 @@
     <br>
 
     <!-- Submit Button -->
-    <button type="submit" class="btn btn-success btn-lg btn-block" id="submit"><i class="fa fa-search" aria-hidden="true"></i>
-     Find Friends!</button>
+    <button type="submit" class="btn btn-success btn-lg btn-block" id="submit"><i class="fa fa-search"
+        aria-hidden="true"></i>
+      Find Friends!</button>
 
     <hr>
     <footer class="footer">
       <div class="container">
-        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/NideverJoe?tab=repositories">GitHub Repo</a></p>
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/NideverJoe?tab=repositories">GitHub
+            Repo</a></p>
       </div>
     </footer>
 
@@ -171,14 +173,14 @@
     <div class="modal-dialog">
 
       <!-- Modal content-->
-      <div class="modal-content">
+      <div class="modal-content text-center">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h2 class="modal-title"><strong>Best Match</strong></h2>
         </div>
         <div class="modal-body">
           <h2 id="match-name"></h2>
-          <img id="match-img" src="" alt="">
+          <img id="match-img" src="" alt="" style="width:50%">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -189,6 +191,8 @@
   </div>
 
   <script type="text/javascript">
+    
+    
     // Chosen CSS
     var config = {
       ".chosen-select": {},
@@ -211,19 +215,19 @@
     }
 
     // Capture the form inputs
-    $("#submit").on("click", function(event) {
+    $("#submit").on("click", function (event) {
       event.preventDefault();
 
       // Form validation
       function validateForm() {
         var isValid = true;
-        $(".form-control").each(function() {
+        $(".form-control").each(function () {
           if ($(this).val() === "") {
             isValid = false;
           }
         });
 
-        $(".chosen-select").each(function() {
+        $(".chosen-select").each(function () {
 
           if ($(this).val() === "") {
             isValid = false;
@@ -255,11 +259,15 @@
         console.log(userData)
 
         // AJAX post the data to the friends API.
-        $.post("/api/friends", userData, function(data) {
+        $.post("/api/friends", userData, function (data) {
 
+          console.log(data)
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-          $("#results-modal").modal("toggle");
+          $("#match-name").text(data.matchName);
+          $("#match-img").attr("src", data.matchImage);
 
+          // Show the modal with the best match
+          $("#results-modal").modal("toggle");
 
         });
       } else {
